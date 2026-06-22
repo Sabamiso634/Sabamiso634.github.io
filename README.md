@@ -1,38 +1,45 @@
-# NEURO2026 poster project page
+# Real-Time Closed-Loop Brain–Body Simulation site
 
-Static GitHub Pages site for the poster PDF and simulation videos.
+This directory is a static GitHub Pages site for the NEURO2026 poster page.
 
-## Files to add
+## Included
 
-Place the following MP4 files in `assets/`:
+- `index.html` and `styles.css`
+- bilingual English/Japanese language toggle with `?lang=en` and `?lang=ja`
+- poster PDF: `assets/poster.pdf`
+- implementation note: `assets/SITE_IMPLEMENTATION_TEXT.md`
+- run data archive: `assets/data/run0001_20260623_0325_connected.tar.gz`
+- extracted CSV/log files under `assets/data/run0001_20260623_0325_connected/`
+- generated SVG charts under `assets/figures/`
 
-- `assets/nrp-lever-pull.mp4` — NRP/Gazebo mouse forearm musculoskeletal lever-pull model used in the poster-related demo
-- `assets/mujoco-virtual-rodent-gait.mp4` — MuJoCo Virtual Rodent walking prototype shown as a future direction
+## Add videos
 
-The poster PDF is already placed at:
+Place the two MP4 files here:
 
-- `assets/poster.pdf`
-
-## Scope note
-
-The lever-pull video is the demo directly connected to the poster. The MuJoCo Virtual Rodent video is not part of the current poster result. It is included to show the planned direction toward a freely moving virtual rodent validation platform.
-
-The MuJoCo Virtual Rodent prototype described here is not an explicit musculoskeletal model. Virtual muscle-length differences are computed internally and used to estimate joint angles.
-
-## Local preview
-
-Open `index.html` in a browser, or run a local server:
-
-```bash
-python3 -m http.server 8000
+```text
+assets/nrp-lever-pull.mp4
+assets/mujoco-virtual-rodent-gait.mp4
 ```
 
-Then open `http://localhost:8000`.
+Recommended browser-compatible encoding: MP4 H.264 video + AAC audio.
 
-## GitHub Pages
+## Run 0001 summary
 
-Upload all files to the repository root, then enable GitHub Pages from `Settings` → `Pages` → `Deploy from a branch` → `main` / `root`.
+- simulation time: 10.05 s
+- wall-clock time: 9.38 s
+- sim/wall: 1.071677
+- mean 50-ms block latency: 46.625816 ms
+- max 50-ms block latency: 58.290863 ms
+- blocks within 50 ms: 174/201 (86.6%)
+- deadline misses: 27
 
-## Video notes
+## Before publishing
 
-Prefer MP4 encoded with H.264 video. Keep each video short and compressed for GitHub Pages delivery. If either video is too large for the repository, host it externally and replace the video source URL in `index.html`.
+Replace the placeholder footer with:
+
+- contact email or lab page
+- GitHub repository URL
+- commit hash / release tag for the code used in run0001
+- license information
+- DOI, preprint, or conference abstract link when available
+- video and model attribution for NRP/Gazebo and MuJoCo Virtual Rodent assets

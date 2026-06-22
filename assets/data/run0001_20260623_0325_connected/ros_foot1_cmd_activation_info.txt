@@ -1,0 +1,9 @@
+Type: std_msgs/Float64
+
+Publishers: 
+ * /ros_cle_simulation_462_1782147809117 (http://172.19.0.3:44153/)
+
+Subscribers: 
+ * /gazebo (http://172.19.0.3:42259/)
+
+

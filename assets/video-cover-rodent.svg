@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="MuJoCo Virtual Rodent future-direction demo placeholder">
+  <rect width="1280" height="720" fill="#0f172a"/>
+  <rect x="80" y="80" width="1120" height="560" rx="28" fill="#172554" stroke="#64748b" stroke-width="4"/>
+  <text x="120" y="180" fill="#f8fafc" font-size="54" font-family="Arial, sans-serif" font-weight="700">Future-direction demo</text>
+  <text x="120" y="260" fill="#cbd5e1" font-size="38" font-family="Arial, sans-serif">MuJoCo Virtual Rodent walking prototype</text>
+  <path d="M560 360 l140 82 l-140 82 z" fill="#38bdf8"/>
+  <text x="120" y="600" fill="#94a3b8" font-size="28" font-family="Arial, sans-serif">Place video: assets/mujoco-virtual-rodent-gait.mp4</text>
+</svg>

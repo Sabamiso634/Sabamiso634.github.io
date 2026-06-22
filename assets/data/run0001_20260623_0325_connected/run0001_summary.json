@@ -1,0 +1,20 @@
+{
+  "run_id": "run0001_20260623_0325_connected",
+  "simulation_time_ms": 10050.0,
+  "wall_clock_ms": 9377.82453,
+  "simulation_time_per_wall_clock": 1.071677,
+  "loop_blocks": 201,
+  "loop_latency_mean_ms": 46.625816,
+  "loop_latency_max_ms": 58.290863,
+  "loop_latency_p95_ms": 51.071227,
+  "loop_latency_std_ms": 2.874162344411063,
+  "deadline_miss_count": 27,
+  "blocks_within_target": 174,
+  "blocks_within_target_pct": 86.56716417910447,
+  "foot1_path_points_min": -0.085478,
+  "foot1_path_points_max": -0.069505,
+  "foot1_path_points_range": 0.015973,
+  "gpu": "Tesla V100-PCIE-16GB",
+  "cuda": "CUDA 11.5 / nvcc V11.5.119",
+  "nvidia_driver": "535.309.01"
+}

@@ -1,0 +1,4 @@
+NAMES      IMAGE                                  STATUS             PORTS
+proxy      hbpneurorobotics/nrp_proxy:latest      Up About an hour   0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp
+frontend   hbpneurorobotics/nrp_frontend:latest   Up About an hour   0.0.0.0:9002->9002/tcp, [::]:9002->9002/tcp
+nrp        hbpneurorobotics/nrp:latest            Up About an hour   0.0.0.0:8090->8090/tcp, [::]:8090->8090/tcp, 0.0.0.0:8888->8888/tcp, [::]:8888->8888/tcp, 0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp

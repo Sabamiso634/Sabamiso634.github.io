@@ -1,0 +1,15 @@
+Type: rosgraph_msgs/Clock
+
+Publishers: 
+ * /gazebo (http://172.19.0.3:42259/)
+
+Subscribers: 
+ * /rosout (http://172.19.0.3:42607/)
+ * /rosbridge_websocket (http://127.0.0.1:34869/)
+ * /web_video_server (http://172.19.0.3:38847/)
+ * /ros_cle_simulation_462_1782147809117 (http://172.19.0.3:44153/)
+ * /nrp_backend (http://127.0.0.1:38253/)
+ * /sm_MouseCDP1Control_SMACH (http://127.0.0.1:42117/)
+ * /gazebo (http://172.19.0.3:42259/)
+
+

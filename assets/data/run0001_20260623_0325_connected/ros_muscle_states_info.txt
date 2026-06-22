@@ -1,0 +1,9 @@
+Type: gazebo_ros_muscle_interface/MuscleStates
+
+Publishers: 
+ * /gazebo (http://172.19.0.3:42259/)
+
+Subscribers: 
+ * /ros_cle_simulation_462_1782147809117 (http://172.19.0.3:44153/)
+
+

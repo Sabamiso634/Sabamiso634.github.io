@@ -1,0 +1,5 @@
+data: "{\"realTime\": 2372, \"transferFunctionsElapsedTime\": {\"transferfunction\": 13.511574268341064},\
+  \ \"brainsimElapsedTime\": 2085.4062819480896, \"robotsimElapsedTime\": 2319.46396112442,\
+  \ \"simulationTime\": 4724, \"timeout_type\": \"real\", \"state\": \"started\",\
+  \ \"timeout\": 83950}"
+---
