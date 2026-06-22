@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project page for a real-time closed-loop brain-body simulation using a GPU-based multi-region SNN, a mouse forearm model, and future virtual rodent extensions.">
+  <title>Real-Time Closed-Loop Brain–Body Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation" data-i18n-aria-label="aria.primaryNav">
+      <a class="brand" href="#top" aria-label="Project home" data-i18n="nav.brand" data-i18n-aria-label="aria.projectHome">Brain–Body Simulation</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#demos" data-i18n="nav.demos">Demos</a>
+          <a href="#poster" data-i18n="nav.poster">Poster</a>
+          <a href="#future" data-i18n="nav.future">Future</a>
+          <a href="#references" data-i18n="nav.references">References</a>
+        </div>
+        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="aria.languageSwitch">
+          <button class="lang-button" type="button" data-set-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-button" type="button" data-set-lang="ja" aria-pressed="false">日本語</button>
+        </div>
+      </div>
+    </nav>
+
+    <section id="top" class="hero">
+      <p class="eyebrow" data-i18n="hero.eyebrow">NEURO2026 Poster</p>
+      <h1 data-i18n="hero.title">Real-Time Closed-Loop Brain–Body Simulation</h1>
+      <p class="subtitle" data-i18n="hero.subtitle">
+        GPU-based multi-region SNN coupled to a mouse forearm model, with future extension toward freely moving virtual rodents
+      </p>
+      <p class="authors">Masachika Taniguchi, Michiru Inoue, Tadashi Yamazaki</p>
+      <p class="affiliation" data-i18n="hero.affiliation">Graduate School of Informatics and Engineering, The University of Electro-Communications</p>
+
+      <div class="hero-actions" aria-label="Main actions" data-i18n-aria-label="aria.mainActions">
+        <a class="button primary" href="#lever-pull-demo" data-i18n="actions.posterDemo">Watch poster demo</a>
+        <a class="button" href="#walking-demo" data-i18n="actions.futureDemo">Watch future demo</a>
+        <a class="button" href="assets/poster.pdf" target="_blank" rel="noopener" data-i18n="actions.openPdf">Open poster PDF</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="metrics" aria-label="Simulation performance metrics" data-i18n-aria-label="aria.metrics">
+      <article>
+        <span class="metric-value">1.07×</span>
+        <span class="metric-label" data-i18n="metrics.factor">Overall real-time factor</span>
+      </article>
+      <article>
+        <span class="metric-value">10.05 s</span>
+        <span class="metric-label" data-i18n="metrics.simulated">Simulated time</span>
+      </article>
+      <article>
+        <span class="metric-value">9.38 s</span>
+        <span class="metric-label" data-i18n="metrics.wall">Wall-clock time</span>
+      </article>
+      <article>
+        <span class="metric-value">46.6 ms</span>
+        <span class="metric-label" data-i18n="metrics.latency">Mean 50-ms block latency</span>
+      </article>
+    </section>
+
+    <section class="section two-column">
+      <div>
+        <p class="section-label" data-i18n="overview.label">Overview</p>
+        <h2 data-i18n="overview.title">Closed-loop coupling from M1 to body and back to S1</h2>
+      </div>
+      <div class="text-block">
+        <p data-i18n="overview.p1">
+          We coupled a GPU-based multi-region SNN with a mouse forearm musculoskeletal model to examine real-time closed-loop brain–body simulation.
+        </p>
+        <p data-i18n="overview.p2">
+          The present loop connects M1 activity to antagonist extensor–flexor muscle activation, body motion, and S1 feedback. It provides a basis for future tests of sensory feedback, cerebellar interactions, and cortico–basal ganglia loops in movement generation.
+        </p>
+      </div>
+    </section>
+
+    <section id="demos" class="section card-section">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="demos.label">Demos</p>
+        <h2 data-i18n="demos.title">Poster demo and future-direction demo</h2>
+        <p data-i18n="demos.lead">
+          Demo 1 is the poster-related NRP/Gazebo mouse forearm lever-pull model. Demo 2 is a future-direction MuJoCo Virtual Rodent gait prototype.
+        </p>
+      </div>
+
+      <div class="media-grid">
+        <article id="lever-pull-demo" class="media-card featured">
+          <div class="video-header">
+            <div>
+              <p class="card-label" data-i18n="demo1.label">Demo 1</p>
+              <h3 data-i18n="demo1.title">NRP/Gazebo mouse forearm lever-pull model</h3>
+            </div>
+            <span class="tag" data-i18n="demo1.tag">Poster result</span>
+          </div>
+          <video class="demo-video" controls preload="metadata" poster="assets/cover-nrp-lever.svg">
+            <source src="assets/nrp-lever-pull.mp4" type="video/mp4">
+            Your browser does not support the video tag. Download the lever-pull demo video from the link below.
+          </video>
+          <p class="caption" data-i18n="demo1.caption">
+            NRP/Gazebo musculoskeletal mouse forearm model performing lever-pull movement. This demo corresponds to the current poster result.
+          </p>
+          <div class="media-actions">
+            <a class="button small" href="assets/nrp-lever-pull.mp4" download data-i18n="actions.downloadVideo">Download video</a>
+          </div>
+        </article>
+
+        <article id="walking-demo" class="media-card">
+          <div class="video-header">
+            <div>
+              <p class="card-label" data-i18n="demo2.label">Demo 2</p>
+              <h3 data-i18n="demo2.title">MuJoCo Virtual Rodent gait prototype</h3>
+            </div>
+            <span class="tag" data-i18n="demo2.tag">Future direction</span>
+          </div>
+          <video class="demo-video" controls preload="metadata" poster="assets/cover-mujoco-rodent-gait.svg">
+            <source src="assets/mujoco-virtual-rodent-gait.mp4" type="video/mp4">
+            Your browser does not support the video tag. Download the MuJoCo Virtual Rodent gait demo video from the link below.
+          </video>
+          <p class="caption" data-i18n="demo2.caption">
+            Four-limb, 12-joint rodent walking prototype based on MuJoCo Virtual Rodent. This is not an explicit musculoskeletal model; virtual muscle-length differences are computed internally and used to estimate joint angles.
+          </p>
+          <div class="media-actions">
+            <a class="button small" href="assets/mujoco-virtual-rodent-gait.mp4" download data-i18n="actions.downloadVideo">Download video</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="scope-note" data-i18n="demos.scope">
+        Scope note: only the NRP/Gazebo lever-pull demo is part of the present poster result. The MuJoCo Virtual Rodent demo is included to show the planned direction toward a freely moving virtual rodent validation platform.
+      </p>
+    </section>
+
+    <section id="poster" class="section card-section">
+      <div class="section-heading">
+        <p class="section-label" data-i18n="poster.label">Poster PDF</p>
+        <h2 data-i18n="poster.title">Full poster</h2>
+        <p data-i18n="poster.lead">The PDF is embedded below. Some mobile browsers may open it in a new tab instead of previewing it inline.</p>
+      </div>
+
+      <div class="pdf-card">
+        <iframe class="pdf-frame" src="assets/poster.pdf#view=FitH" title="Poster PDF preview" data-i18n-title="poster.iframeTitle"></iframe>
+        <div class="media-actions">
+          <a class="button small" href="assets/poster.pdf" target="_blank" rel="noopener" data-i18n="actions.openPdfShort">Open PDF</a>
+          <a class="button small" href="assets/poster.pdf" download data-i18n="actions.downloadPdf">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="future" class="section two-column future-panel">
+      <div>
+        <p class="section-label" data-i18n="future.label">Future hypothesis</p>
+        <h2 data-i18n="future.title">Toward hierarchical reinforcement learning in freely moving virtual rodents</h2>
+      </div>
+      <div class="text-block">
+        <p data-i18n="future.p1">
+          Future work will test a hierarchical reinforcement-learning hypothesis by implementing reinforcement-learning-inspired rules in cerebellar and cortico–basal ganglia loops.
+        </p>
+        <p data-i18n="future.p2">
+          The planned platform will extend from constrained forearm lever-pull control toward whole-body virtual rodents that can move freely and support closed-loop validation of neural circuit roles.
+        </p>
+      </div>
+    </section>
+
+    <section class="section highlight-grid" aria-label="Project highlights" data-i18n-aria-label="aria.highlights">
+      <article>
+        <h3 data-i18n="highlights.neuralTitle">Neural model</h3>
+        <p data-i18n="highlights.neuralText">Multi-region SNN including M1/S1, BG, TH, cerebellum, and CPG.</p>
+      </article>
+      <article>
+        <h3 data-i18n="highlights.loopTitle">Closed loop</h3>
+        <p data-i18n="highlights.loopText">M1 → muscles → body → S1 feedback, coupled online with the mouse forearm model.</p>
+      </article>
+      <article>
+        <h3 data-i18n="highlights.expansionTitle">Expansion</h3>
+        <p data-i18n="highlights.expansionText">From forearm lever-pull control toward freely moving virtual rodents for testing cerebellar and cortico–basal ganglia loops.</p>
+      </article>
+    </section>
+
+    <section id="references" class="section references">
+      <p class="section-label" data-i18n="references.label">References</p>
+      <h2 data-i18n="references.title">References</h2>
+      <ol>
+        <li>Kuniyoshi et al., <em>Frontiers in Neurorobotics</em>, 2023.</li>
+        <li>Falotico et al., <em>Frontiers in Neurorobotics</em>, 2017.</li>
+        <li>Kuriyama et al., <em>Frontiers in Cellular Neuroscience</em>, 2021.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.text">© 2026 Brain–Body Simulation Project. Replace this line with your contact or lab page.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        pageTitle: 'Real-Time Closed-Loop Brain–Body Simulation',
+        metaDescription: 'Project page for a real-time closed-loop brain-body simulation using a GPU-based multi-region SNN, a mouse forearm model, and future virtual rodent extensions.',
+        'aria.primaryNav': 'Primary navigation',
+        'aria.projectHome': 'Project home',
+        'aria.languageSwitch': 'Language',
+        'aria.mainActions': 'Main actions',
+        'aria.metrics': 'Simulation performance metrics',
+        'aria.highlights': 'Project highlights',
+        'nav.brand': 'Brain–Body Simulation',
+        'nav.demos': 'Demos',
+        'nav.poster': 'Poster',
+        'nav.future': 'Future',
+        'nav.references': 'References',
+        'hero.eyebrow': 'NEURO2026 Poster',
+        'hero.title': 'Real-Time Closed-Loop Brain–Body Simulation',
+        'hero.subtitle': 'GPU-based multi-region SNN coupled to a mouse forearm model, with future extension toward freely moving virtual rodents',
+        'hero.affiliation': 'Graduate School of Informatics and Engineering, The University of Electro-Communications',
+        'actions.posterDemo': 'Watch poster demo',
+        'actions.futureDemo': 'Watch future demo',
+        'actions.openPdf': 'Open poster PDF',
+        'actions.openPdfShort': 'Open PDF',
+        'actions.downloadPdf': 'Download PDF',
+        'actions.downloadVideo': 'Download video',
+        'metrics.factor': 'Overall real-time factor',
+        'metrics.simulated': 'Simulated time',
+        'metrics.wall': 'Wall-clock time',
+        'metrics.latency': 'Mean 50-ms block latency',
+        'overview.label': 'Overview',
+        'overview.title': 'Closed-loop coupling from M1 to body and back to S1',
+        'overview.p1': 'We coupled a GPU-based multi-region SNN with a mouse forearm musculoskeletal model to examine real-time closed-loop brain–body simulation.',
+        'overview.p2': 'The present loop connects M1 activity to antagonist extensor–flexor muscle activation, body motion, and S1 feedback. It provides a basis for future tests of sensory feedback, cerebellar interactions, and cortico–basal ganglia loops in movement generation.',
+        'demos.label': 'Demos',
+        'demos.title': 'Poster demo and future-direction demo',
+        'demos.lead': 'Demo 1 is the poster-related NRP/Gazebo mouse forearm lever-pull model. Demo 2 is a future-direction MuJoCo Virtual Rodent gait prototype.',
+        'demo1.label': 'Demo 1',
+        'demo1.title': 'NRP/Gazebo mouse forearm lever-pull model',
+        'demo1.tag': 'Poster result',
+        'demo1.caption': 'NRP/Gazebo musculoskeletal mouse forearm model performing lever-pull movement. This demo corresponds to the current poster result.',
+        'demo2.label': 'Demo 2',
+        'demo2.title': 'MuJoCo Virtual Rodent gait prototype',
+        'demo2.tag': 'Future direction',
+        'demo2.caption': 'Four-limb, 12-joint rodent walking prototype based on MuJoCo Virtual Rodent. This is not an explicit musculoskeletal model; virtual muscle-length differences are computed internally and used to estimate joint angles.',
+        'demos.scope': 'Scope note: only the NRP/Gazebo lever-pull demo is part of the present poster result. The MuJoCo Virtual Rodent demo is included to show the planned direction toward a freely moving virtual rodent validation platform.',
+        'poster.label': 'Poster PDF',
+        'poster.title': 'Full poster',
+        'poster.lead': 'The PDF is embedded below. Some mobile browsers may open it in a new tab instead of previewing it inline.',
+        'poster.iframeTitle': 'Poster PDF preview',
+        'future.label': 'Future hypothesis',
+        'future.title': 'Toward hierarchical reinforcement learning in freely moving virtual rodents',
+        'future.p1': 'Future work will test a hierarchical reinforcement-learning hypothesis by implementing reinforcement-learning-inspired rules in cerebellar and cortico–basal ganglia loops.',
+        'future.p2': 'The planned platform will extend from constrained forearm lever-pull control toward whole-body virtual rodents that can move freely and support closed-loop validation of neural circuit roles.',
+        'highlights.neuralTitle': 'Neural model',
+        'highlights.neuralText': 'Multi-region SNN including M1/S1, BG, TH, cerebellum, and CPG.',
+        'highlights.loopTitle': 'Closed loop',
+        'highlights.loopText': 'M1 → muscles → body → S1 feedback, coupled online with the mouse forearm model.',
+        'highlights.expansionTitle': 'Expansion',
+        'highlights.expansionText': 'From forearm lever-pull control toward freely moving virtual rodents for testing cerebellar and cortico–basal ganglia loops.',
+        'references.label': 'References',
+        'references.title': 'References',
+        'footer.text': '© 2026 Brain–Body Simulation Project. Replace this line with your contact or lab page.'
+      },
+      ja: {
+        pageTitle: 'リアルタイム閉ループ脳–身体シミュレーション',
+        metaDescription: 'GPUベース多領域SNN、マウス前肢モデル、将来的な仮想齧歯類拡張に関するリアルタイム閉ループ脳–身体シミュレーションのプロジェクトページ。',
+        'aria.primaryNav': '主要ナビゲーション',
+        'aria.projectHome': 'プロジェクトのホーム',
+        'aria.languageSwitch': '言語選択',
+        'aria.mainActions': '主要アクション',
+        'aria.metrics': 'シミュレーション性能指標',
+        'aria.highlights': 'プロジェクトの要点',
+        'nav.brand': '脳–身体シミュレーション',
+        'nav.demos': 'デモ',
+        'nav.poster': 'ポスター',
+        'nav.future': '今後の展開',
+        'nav.references': '参考文献',
+        'hero.eyebrow': 'NEURO2026 ポスター',
+        'hero.title': 'リアルタイム閉ループ脳–身体シミュレーション',
+        'hero.subtitle': 'GPUベース多領域SNNをマウス前肢モデルに結合し、自由行動型仮想齧歯類への発展を目指す検証基盤',
+        'hero.affiliation': '電気通信大学 大学院情報理工学研究科',
+        'actions.posterDemo': 'ポスターデモを見る',
+        'actions.futureDemo': '将来展開デモを見る',
+        'actions.openPdf': 'ポスターPDFを開く',
+        'actions.openPdfShort': 'PDFを開く',
+        'actions.downloadPdf': 'PDFをダウンロード',
+        'actions.downloadVideo': '動画をダウンロード',
+        'metrics.factor': '全体のリアルタイム係数',
+        'metrics.simulated': 'シミュレーション時間',
+        'metrics.wall': '実行時間',
+        'metrics.latency': '50 msブロック平均遅延',
+        'overview.label': '概要',
+        'overview.title': 'M1から身体、S1へ戻る閉ループ結合',
+        'overview.p1': 'GPUベース多領域SNNとマウス前肢筋骨格モデルを結合し、リアルタイム閉ループ脳–身体シミュレーションを検証しました。',
+        'overview.p2': '現在のループは、M1活動、拮抗する伸筋–屈筋活動、身体運動、S1フィードバックを接続します。この基盤を用いて、感覚フィードバック、小脳連関、皮質–基底核ループが運動生成に与える役割を将来的に検証します。',
+        'demos.label': 'デモ',
+        'demos.title': 'ポスター対応デモと将来展開デモ',
+        'demos.lead': 'Demo 1は、今回のポスターに対応するNRP/Gazeboのマウス前肢レバー引きモデルです。Demo 2は、将来展開を示すMuJoCo Virtual Rodent歩行プロトタイプです。',
+        'demo1.label': 'Demo 1',
+        'demo1.title': 'NRP/Gazebo マウス前肢レバー引きモデル',
+        'demo1.tag': '今回の結果',
+        'demo1.caption': 'NRP/Gazebo上のマウス前肢筋骨格モデルによるレバー引き運動です。このデモは今回のポスター結果に対応します。',
+        'demo2.label': 'Demo 2',
+        'demo2.title': 'MuJoCo Virtual Rodent 歩行プロトタイプ',
+        'demo2.tag': '将来展開',
+        'demo2.caption': 'MuJoCo Virtual Rodentに基づく4肢12関節の齧歯類歩行プロトタイプです。明示的な筋骨格モデルではなく、内部で仮想的な筋長差を計算し、そこから関節角度を推定しています。',
+        'demos.scope': '注：現在のポスター結果に含まれるのはNRP/Gazeboのレバー引きデモのみです。MuJoCo Virtual Rodentデモは、自由に動き回る仮想齧歯類の検証基盤へ発展させるための方向性を示すものです。',
+        'poster.label': 'ポスターPDF',
+        'poster.title': 'ポスター全文',
+        'poster.lead': 'PDFを以下に埋め込んでいます。スマートフォン環境では、埋め込み表示ではなく新しいタブで開かれる場合があります。',
+        'poster.iframeTitle': 'ポスターPDFプレビュー',
+        'future.label': '将来仮説',
+        'future.title': '自由行動型仮想齧歯類における階層強化学習の検証へ',
+        'future.p1': '今後は、小脳ループと皮質–基底核ループに強化学習に着想を得た学習則を導入し、両ループの役割を階層強化学習の仮説として検証します。',
+        'future.p2': '制約された前肢レバー引き制御から、自由に動き回る全身型仮想齧歯類へ拡張し、神経回路の役割を閉ループで検証できる基盤を目指します。',
+        'highlights.neuralTitle': '神経モデル',
+        'highlights.neuralText': 'M1/S1、BG、TH、小脳、CPGを含む多領域SNN。',
+        'highlights.loopTitle': '閉ループ',
+        'highlights.loopText': 'M1 → muscles → body → S1 feedback をマウス前肢モデルとオンライン結合。',
+        'highlights.expansionTitle': '拡張',
+        'highlights.expansionText': '前肢レバー引き制御から、自由行動型仮想齧歯類による小脳連関と皮質–基底核ループの検証へ。',
+        'references.label': '参考文献',
+        'references.title': '参考文献',
+        'footer.text': '© 2026 Brain–Body Simulation Project. 連絡先または研究室ページへのリンクに置き換えてください。'
+      }
+    };
+
+    const supportedLanguages = new Set(['en', 'ja']);
+
+    function chooseInitialLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const fromQuery = params.get('lang');
+      if (supportedLanguages.has(fromQuery)) return fromQuery;
+
+      try {
+        const saved = localStorage.getItem('brainBodySiteLanguage');
+        if (supportedLanguages.has(saved)) return saved;
+      } catch (error) {
+        // localStorage may be unavailable in private or restricted browsing modes.
+      }
+
+      const browserLanguage = navigator.language || '';
+      return browserLanguage.toLowerCase().startsWith('ja') ? 'ja' : 'en';
+    }
+
+    function applyLanguage(language, updateUrl = false) {
+      const lang = supportedLanguages.has(language) ? language : 'en';
+      const dictionary = translations[lang];
+
+      document.documentElement.lang = lang;
+      document.title = dictionary.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute('content', dictionary.metaDescription);
+
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (dictionary[key]) element.textContent = dictionary[key];
+      });
+
+      document.querySelectorAll('[data-i18n-title]').forEach((element) => {
+        const key = element.getAttribute('data-i18n-title');
+        if (dictionary[key]) element.setAttribute('title', dictionary[key]);
+      });
+
+      document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+        const key = element.getAttribute('data-i18n-aria-label');
+        if (dictionary[key]) element.setAttribute('aria-label', dictionary[key]);
+      });
+
+      document.querySelectorAll('[data-set-lang]').forEach((button) => {
+        button.setAttribute('aria-pressed', button.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+
+      try {
+        localStorage.setItem('brainBodySiteLanguage', lang);
+      } catch (error) {
+        // Ignore storage errors; the language switch still works for the current page view.
+      }
+
+      if (updateUrl && window.history && window.history.replaceState) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+      }
+    }
+
+    document.querySelectorAll('[data-set-lang]').forEach((button) => {
+      button.addEventListener('click', () => {
+        applyLanguage(button.getAttribute('data-set-lang'), true);
+      });
+    });
+
+    applyLanguage(chooseInitialLanguage());
+  </script>
+</body>
+</html>

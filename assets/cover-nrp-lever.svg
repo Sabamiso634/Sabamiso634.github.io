@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">NRP mouse forearm lever-pull demo placeholder</title>
+  <desc id="desc">Placeholder image for the NRP mouse forearm lever-pull video.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffb34a"/>
+      <stop offset="100%" stop-color="#1e1b16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <g opacity="0.2" fill="none" stroke="#fff8ef" stroke-width="8">
+    <path d="M120 520 C280 430 350 450 500 360 S780 260 1120 220"/>
+    <path d="M130 560 C320 500 410 530 560 450 S820 370 1130 340"/>
+  </g>
+  <circle cx="640" cy="330" r="92" fill="rgba(255,255,255,0.86)"/>
+  <path d="M616 280 L616 380 L704 330 Z" fill="#1e1b16"/>
+  <text x="640" y="500" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="42" font-weight="800" fill="#fff">NRP lever-pull demo</text>
+  <text x="640" y="555" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="26" fill="#fff8ef">Replace with assets/nrp-lever-pull.mp4</text>
+</svg>
