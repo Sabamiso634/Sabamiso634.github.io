@@ -3,19 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Project page for a real-time closed-loop brain-body simulation using a GPU-based multi-region SNN and a mouse musculoskeletal model.">
-  <title>Real-Time Closed-Loop Brain–Body Simulation</title>
+  <meta name="description" content="Demo video page for a research project in preparation.">
+  <title>Research Demo Videos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header id="top" class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Project home">Brain–Body Simulation</a>
+      <a class="brand" href="#top" aria-label="Project home">Research Demo Videos</a>
       <div class="nav-links">
-        <a href="#data"><span class="lang-en">Data</span><span class="lang-ja">データ</span></a>
         <a href="#demo"><span class="lang-en">Demo</span><span class="lang-ja">デモ</span></a>
-        <a href="#implementation"><span class="lang-en">Implementation</span><span class="lang-ja">実装</span></a>
-        <a href="#poster"><span class="lang-en">Poster</span><span class="lang-ja">ポスター</span></a>
       </div>
       <div class="language-switch" aria-label="Language selection">
         <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
@@ -24,284 +21,51 @@
     </nav>
 
     <section class="hero">
-      <p class="eyebrow">Poster</p>
       <h1>
-        <span class="lang-en">Real-Time Closed-Loop Brain–Body Simulation</span>
-        <span class="lang-ja">リアルタイム閉ループ脳–身体シミュレーション</span>
+        <span class="lang-en">Research Demo Videos</span>
+        <span class="lang-ja">研究デモ動画</span>
       </h1>
-      <p class="subtitle">
-        <span class="lang-en">Using a GPU-based multi-region spiking neural network and a mouse musculoskeletal model</span>
-        <span class="lang-ja">GPUベース多領域SNNとマウス筋骨格モデルを用いた脳–身体閉ループの実時間実行</span>
-      </p>
-      <p class="authors">Masachika Taniguchi, Michiru Inoue, Tadashi Yamazaki</p>
-      <p class="affiliation">Graduate School of Informatics and Engineering, The University of Electro-Communications</p>
 
       <div class="hero-actions" aria-label="Main actions">
         <a class="button primary" href="#demo"><span class="lang-en">Watch demos</span><span class="lang-ja">デモを見る</span></a>
-        <a class="button" href="assets/poster.pdf" target="_blank" rel="noopener"><span class="lang-en">Open poster PDF</span><span class="lang-ja">ポスターPDFを開く</span></a>
-        <a class="button" href="assets/data/run0001_20260623_0325_connected.tar.gz" download><span class="lang-en">Download run data</span><span class="lang-ja">実行データをダウンロード</span></a>
       </div>
     </section>
   </header>
 
   <main>
-    <section class="metrics" aria-label="Simulation performance metrics">
-      <article>
-        <span class="metric-value">1.07×</span>
-        <span class="metric-label"><span class="lang-en">Real-time factor</span><span class="lang-ja">リアルタイム係数</span></span>
-      </article>
-      <article>
-        <span class="metric-value">10.05 s</span>
-        <span class="metric-label"><span class="lang-en">Simulated time</span><span class="lang-ja">シミュレーション時間</span></span>
-      </article>
-      <article>
-        <span class="metric-value">9.38 s</span>
-        <span class="metric-label"><span class="lang-en">Wall-clock time</span><span class="lang-ja">実時間</span></span>
-      </article>
-      <article>
-        <span class="metric-value">46.6 ms</span>
-        <span class="metric-label"><span class="lang-en">Mean 50-ms block latency</span><span class="lang-ja">50 msブロック平均遅延</span></span>
-      </article>
-      <article>
-        <span class="metric-value">86.6%</span>
-        <span class="metric-label"><span class="lang-en">Blocks within 50 ms</span><span class="lang-ja">50 ms以内のブロック</span></span>
-      </article>
-    </section>
-
-    <section class="section two-column">
-      <div>
-        <p class="section-label"><span class="lang-en">Overview</span><span class="lang-ja">概要</span></p>
-        <h2>
-          <span class="lang-en">Closed-loop coupling from M1 to body and back to S1</span>
-          <span class="lang-ja">M1から身体へ、身体からS1へ戻る閉ループ接続</span>
-        </h2>
-      </div>
-      <div class="text-block">
-        <p>
-          <span class="lang-en">We coupled a GPU-based multi-region SNN with a mouse forearm musculoskeletal model to examine real-time closed-loop brain–body simulation.</span>
-          <span class="lang-ja">GPUベース多領域SNNをマウス前肢筋骨格モデルと結合し、脳–身体閉ループをリアルタイムで実行できるか検証しました。</span>
-        </p>
-        <p>
-          <span class="lang-en">The loop maps M1_L5B_PT population activity to antagonist muscle activation, receives body-state feedback through a thalamic S1 relay, and propagates the resulting activity through the S1 network.</span>
-          <span class="lang-ja">M1_L5B_PT集団活動を拮抗筋のアクチュエーションへ変換し、身体状態を視床S1リレー経由の入力として戻すことで、M1→筋→身体→S1のオンライン閉ループを構成しています。</span>
-        </p>
-        <p>
-          <span class="lang-en">The long-term goal is a validation platform for sensory feedback, cerebellar interactions, and cortico–basal ganglia loops during movement generation.</span>
-          <span class="lang-ja">将来的には、感覚フィードバック、小脳連関、皮質–基底核ループが運動生成に与える役割を検証する基盤へ発展させます。</span>
-        </p>
-      </div>
-    </section>
-
-    <section id="data" class="section card-section">
-      <div class="section-heading">
-        <p class="section-label"><span class="lang-en">Run data</span><span class="lang-ja">実行データ</span></p>
-        <h2>
-          <span class="lang-en">Connected NRP/Gazebo run: run0001</span>
-          <span class="lang-ja">NRP/Gazebo接続実行: run0001</span>
-        </h2>
-        <p>
-          <span class="lang-en">The uploaded data package contains the connected run from 2026-06-23 03:23–03:25 JST. Values below are computed from the included CSV logs.</span>
-          <span class="lang-ja">アップロードされたデータパッケージには、2026-06-23 03:23–03:25 JSTの接続実行ログが含まれています。以下の値は同梱CSVから算出したものです。</span>
-        </p>
-      </div>
-
-      <div class="data-summary-grid">
-        <article>
-          <span class="metric-value">1.072×</span>
-          <span class="metric-label"><span class="lang-en">Simulation / wall-clock</span><span class="lang-ja">シミュレーション / 実時間</span></span>
-        </article>
-        <article>
-          <span class="metric-value">46.63 ms</span>
-          <span class="metric-label"><span class="lang-en">Mean latency</span><span class="lang-ja">平均遅延</span></span>
-        </article>
-        <article>
-          <span class="metric-value">58.29 ms</span>
-          <span class="metric-label"><span class="lang-en">Max latency</span><span class="lang-ja">最大遅延</span></span>
-        </article>
-        <article>
-          <span class="metric-value">174/201</span>
-          <span class="metric-label"><span class="lang-en">Blocks within target</span><span class="lang-ja">目標内ブロック数</span></span>
-        </article>
-        <article>
-          <span class="metric-value">27</span>
-          <span class="metric-label"><span class="lang-en">Deadline misses</span><span class="lang-ja">デッドライン超過</span></span>
-        </article>
-        <article>
-          <span class="metric-value">0.01597</span>
-          <span class="metric-label"><span class="lang-en">Foot1 position range</span><span class="lang-ja">Foot1位置レンジ</span></span>
-        </article>
-      </div>
-
-
-      <div class="chart-grid">
-        <figure>
-          <img src="assets/figures/loop_latency.svg" alt="Per-block loop latency over simulated time">
-          <figcaption><span class="lang-en">Per-block loop latency. Target block duration: 50 ms.</span><span class="lang-ja">50 msブロックごとの遅延。目標ブロック長は50 ms。</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/figures/m1_output_spikes.svg" alt="M1 two-population spike counts">
-          <figcaption><span class="lang-en">M1_L5B_PT two-population output used for muscle readout.</span><span class="lang-ja">筋出力の読み出しに使ったM1_L5B_PTの2群活動。</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/figures/reconstructed_muscle_activation.svg" alt="Reconstructed antagonist muscle activation">
-          <figcaption><span class="lang-en">Antagonist muscle activation reconstructed from the saved M1 rates.</span><span class="lang-ja">保存済みM1 rateから再構成した拮抗筋アクチュエーション。</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/figures/foot1_path_points.svg" alt="Foot1 body-position feedback log">
-          <figcaption><span class="lang-en">Representative body-position feedback from Foot1 path_points.</span><span class="lang-ja">Foot1 path_pointsから得た代表的な身体位置フィードバック。</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/figures/s1_activity_summary.svg" alt="S1 L4 pyramidal population activity">
-          <figcaption><span class="lang-en">S1_L4_Pyr activity summarized in 100-ms bins.</span><span class="lang-ja">S1_L4_Pyr活動を100 ms binで集計したもの。</span></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/figures/cpg_activity_summary.svg" alt="CPG two-phase activity">
-          <figcaption><span class="lang-en">Two-phase CPG activity that biases the two M1 readout populations.</span><span class="lang-ja">M1読み出し2群を駆動する2相性CPG活動。</span></figcaption>
-        </figure>
-      </div>
-
-      <div class="download-card">
-        <h3><span class="lang-en">Downloadable files</span><span class="lang-ja">ダウンロード用ファイル</span></h3>
-        <div class="media-actions">
-          <a class="button small" href="assets/data/run0001_20260623_0325_connected.tar.gz" download><span class="lang-en">Full data archive</span><span class="lang-ja">全データアーカイブ</span></a>
-          <a class="button small" href="assets/data/run0001_20260623_0325_connected/run0001_realtime_summary.csv" download>realtime_summary.csv</a>
-          <a class="button small" href="assets/data/run0001_20260623_0325_connected/run0001_loop_metrics.csv" download>loop_metrics.csv</a>
-          <a class="button small" href="assets/data/run0001_20260623_0325_connected/m1_reconstructed_muscle_activation.csv" download>reconstructed_activation.csv</a>
-          <a class="button small" href="assets/data/run0001_20260623_0325_connected/benchmark_conditions.md" download>benchmark_conditions.md</a>
-        </div>
-      </div>
-    </section>
-
     <section id="demo" class="section card-section">
       <div class="section-heading">
-        <p class="section-label"><span class="lang-en">Demo videos</span><span class="lang-ja">デモ動画</span></p>
         <h2>
-          <span class="lang-en">Poster result and future-direction demo</span>
-          <span class="lang-ja">今回の結果と将来展開デモ</span>
+          <span class="lang-en">Videos</span>
+          <span class="lang-ja">動画</span>
         </h2>
-        <p>
-          <span class="lang-en">Only the NRP/Gazebo lever-pull demo is part of the present poster result. The MuJoCo Virtual Rodent demo is included as a future-direction prototype.</span>
-          <span class="lang-ja">今回のポスター結果に対応するのはNRP/Gazeboのレバー引きデモです。MuJoCo Virtual Rodentの歩行デモは将来展開を示す別プロトタイプとして掲載しています。</span>
-        </p>
       </div>
 
       <div class="video-grid">
         <article class="media-card">
-          <div class="tag"><span class="lang-en">Poster result</span><span class="lang-ja">今回の結果</span></div>
-          <h3>NRP/Gazebo mouse forearm lever-pull model</h3>
+          <div class="tag"><span class="lang-en">Demo 1</span><span class="lang-ja">デモ1</span></div>
+          <h3><span class="lang-en">Demo video 1</span><span class="lang-ja">デモ動画1</span></h3>
           <video class="demo-video" controls preload="metadata">
             <source src="assets/nrp_demo.webm" type="video/webm">
             Your browser does not support the video tag.
           </video>
-          <p>
-            <span class="lang-en">Mouse forearm musculoskeletal model performing lever-pull motion while coupled to the GPU SNN loop.</span>
-            <span class="lang-ja">GPU SNN閉ループと結合したマウス前肢筋骨格モデルによるレバー引き運動。</span>
-          </p>
           <div class="media-actions">
             <a class="button small" href="assets/nrp_demo.webm" download><span class="lang-en">Download video</span><span class="lang-ja">動画をダウンロード</span></a>
           </div>
         </article>
 
         <article class="media-card">
-          <div class="tag secondary"><span class="lang-en">Future direction</span><span class="lang-ja">将来展開</span></div>
-          <h3>MuJoCo Virtual Rodent walking prototype</h3>
+          <div class="tag secondary"><span class="lang-en">Demo 2</span><span class="lang-ja">デモ2</span></div>
+          <h3><span class="lang-en">Demo video 2</span><span class="lang-ja">デモ動画2</span></h3>
           <video class="demo-video" controls preload="metadata">
             <source src="assets/mujoco_demo.webm" type="video/webm">
             Your browser does not support the video tag.
           </video>
-          <p>
-            <span class="lang-en">Four-limb rodent walking prototype based on MuJoCo Virtual Rodent. This implementation is not an explicit musculoskeletal model; virtual muscle-length differences are computed internally and used to estimate joint angles.</span>
-            <span class="lang-ja">MuJoCo Virtual Rodentを用いた4肢歩行プロトタイプです。明示的な筋骨格モデルではなく、内部で仮想的な筋長差を計算し、そこから関節角度を推定しています。</span>
-          </p>
           <div class="media-actions">
             <a class="button small" href="assets/mujoco_demo.webm" download><span class="lang-en">Download video</span><span class="lang-ja">動画をダウンロード</span></a>
           </div>
         </article>
       </div>
-    </section>
-
-    <section id="implementation" class="section card-section">
-      <div class="section-heading">
-        <p class="section-label"><span class="lang-en">Implementation summary</span><span class="lang-ja">実装概要</span></p>
-        <h2>
-          <span class="lang-en">How spikes, muscle commands, and sensory feedback are connected</span>
-          <span class="lang-ja">スパイク列、筋指令、感覚フィードバックの接続</span>
-        </h2>
-      </div>
-      <div class="implementation-grid">
-        <article>
-          <h3><span class="lang-en">Runtime</span><span class="lang-ja">実行単位</span></h3>
-          <p><span class="lang-en">CBT is updated at 1.0 ms, cerebellum and CPG use 0.1-ms internal steps, and NRP/Gazebo I/O is synchronized every 50 ms.</span><span class="lang-ja">CBTは1.0 ms刻み、小脳とCPGは0.1 ms内部刻みで更新し、NRP/Gazebo入出力は50 msブロックごとに同期します。</span></p>
-        </article>
-        <article>
-          <h3><span class="lang-en">M1 to muscles</span><span class="lang-ja">M1から筋へ</span></h3>
-          <p><span class="lang-en">M1_L5B_PT is split into two populations. Their spike-count difference over each 50-ms window updates a low-dimensional state, which drives one of two antagonist muscle groups.</span><span class="lang-ja">M1_L5B_PTを2群に分け、50 ms窓のスパイク数差で低次元状態を更新し、その符号に応じて拮抗筋群を切り替えて駆動します。</span></p>
-        </article>
-        <article>
-          <h3><span class="lang-en">Body to S1</span><span class="lang-ja">身体からS1へ</span></h3>
-          <p><span class="lang-en">Humerus muscle lengths are converted into two feedback rates, copied to GPU memory, and injected as Poisson input to TH_S1 relay neurons before propagating to S1.</span><span class="lang-ja">Humerus筋長を2種類のフィードバック発火率へ変換し、GPUへ転送した上でTH_S1リレー細胞へのポアソン入力として与え、S1へ伝搬させます。</span></p>
-        </article>
-        <article>
-          <h3><span class="lang-en">Cerebellum and thalamus</span><span class="lang-ja">小脳と視床</span></h3>
-          <p><span class="lang-en">M1 spikes are passed to cerebellar mossy-fiber input, and DCN spikes are routed to TH_M1 in a CPG-phase-dependent manner.</span><span class="lang-ja">M1スパイクを小脳苔状線維入力として渡し、DCNスパイクはCPG相に応じてTH_M1へ入力します。</span></p>
-        </article>
-      </div>
-      <details class="details-card">
-        <summary><span class="lang-en">ROS/NRP topics and reproducibility details</span><span class="lang-ja">ROS/NRPトピックと再現性情報</span></summary>
-        <div class="details-content">
-          <p><span class="lang-en">Subscribed body topic: <code>/gazebo_muscle_interface/robot/muscle_states</code>. Published activation topics: Foot1, Foot2, Radius1, Radius2, Humerus1, and Humerus2 <code>/cmd_activation</code>.</span><span class="lang-ja">身体側からは <code>/gazebo_muscle_interface/robot/muscle_states</code> を購読し、Foot1、Foot2、Radius1、Radius2、Humerus1、Humerus2 の <code>/cmd_activation</code> へ筋アクチュエーションを送信します。</span></p>
-          <p><span class="lang-en">Run environment: Tesla V100-PCIE-16GB for CBCT, NVIDIA driver 535.309.01, CUDA 11.5 / nvcc V11.5.119. The NRP/Gazebo run had active muscle-state, activation, and clock topics.</span><span class="lang-ja">実行環境はCBCT側がTesla V100-PCIE-16GB、NVIDIA driver 535.309.01、CUDA 11.5 / nvcc V11.5.119です。NRP/Gazebo側では筋状態、アクチュエーション、clockトピックが有効でした。</span></p>
-          <p><span class="lang-en">The current logs do not directly store all six published <code>cmd_activation</code> values; the activation plot is reconstructed from <code>m1_rates_50ms.csv</code> using the same readout rule.</span><span class="lang-ja">現時点のログには6筋すべての <code>cmd_activation</code> 値は直接保存していません。そのため、アクチュエーション図は <code>m1_rates_50ms.csv</code> から同じ読み出し規則で再構成しています。</span></p>
-        </div>
-      </details>
-      <div class="media-actions">
-        <a class="button small" href="assets/SITE_IMPLEMENTATION_TEXT.md" download><span class="lang-en">Download detailed implementation note</span><span class="lang-ja">詳細実装ノートをダウンロード</span></a>
-      </div>
-    </section>
-
-    <section id="future" class="section two-column future-section">
-      <div>
-        <p class="section-label"><span class="lang-en">Future hypothesis</span><span class="lang-ja">将来仮説</span></p>
-        <h2>
-          <span class="lang-en">Testing hierarchical reinforcement learning in closed-loop virtual rodents</span>
-          <span class="lang-ja">閉ループ仮想齧歯類における階層強化学習仮説の検証</span>
-        </h2>
-      </div>
-      <div class="text-block">
-        <p>
-          <span class="lang-en">Future work will implement reinforcement-learning-inspired rules in cerebellar and cortico–basal ganglia loops. The working hypothesis is that these loops play complementary roles in hierarchical motor control: low-level sensorimotor adaptation, action selection, and policy modulation.</span>
-          <span class="lang-ja">今後は、小脳連関と皮質–基底核ループのそれぞれに強化学習に着想を得た学習則を導入します。作業仮説は、低次の感覚運動適応、行動選択、方策調整を担う相補的なループとして、これらを階層的運動制御の中で検証できるというものです。</span>
-        </p>
-        <p>
-          <span class="lang-en">The MuJoCo Virtual Rodent prototype is positioned as a step toward a freely moving virtual rodent validation platform.</span>
-          <span class="lang-ja">MuJoCo Virtual Rodentプロトタイプは、自由に動き回る仮想齧歯類の検証基盤へ発展させるための準備段階として位置づけています。</span>
-        </p>
-      </div>
-    </section>
-
-    <section id="poster" class="section card-section">
-      <div class="section-heading">
-        <p class="section-label"><span class="lang-en">Poster PDF</span><span class="lang-ja">ポスターPDF</span></p>
-        <h2><span class="lang-en">Full poster</span><span class="lang-ja">ポスター全文</span></h2>
-        <p><span class="lang-en">The PDF is embedded below. Some mobile browsers may open it in a new tab instead of previewing it inline.</span><span class="lang-ja">PDFを下に埋め込んでいます。モバイルブラウザでは、プレビューではなく新しいタブで開かれる場合があります。</span></p>
-      </div>
-      <div class="pdf-card">
-        <iframe class="pdf-frame" src="assets/poster.pdf#view=FitH" title="Poster PDF preview"></iframe>
-        <div class="media-actions">
-          <a class="button small" href="assets/poster.pdf" target="_blank" rel="noopener"><span class="lang-en">Open PDF</span><span class="lang-ja">PDFを開く</span></a>
-          <a class="button small" href="assets/poster.pdf" download><span class="lang-en">Download PDF</span><span class="lang-ja">PDFをダウンロード</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="references" class="section references">
-      <p class="section-label"><span class="lang-en">References</span><span class="lang-ja">参考文献</span></p>
-      <h2><span class="lang-en">References</span><span class="lang-ja">参考文献</span></h2>
-      <ol>
-        <li>Kuniyoshi et al., <em>Frontiers in Neurorobotics</em>, 2023.</li>
-        <li>Falotico et al., <em>Frontiers in Neurorobotics</em>, 2017.</li>
-        <li>Kuriyama et al., <em>Frontiers in Cellular Neuroscience</em>, 2021.</li>
-      </ol>
     </section>
   </main>
 
